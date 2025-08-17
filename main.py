@@ -48,10 +48,6 @@ with pygui.texture_registry(show=False, tag = "texture_registry"):
     pygui.add_dynamic_texture(w, h,d, tag = "trash_texture")
     w,h,c,d = pygui.load_image("plus.png")
     pygui.add_dynamic_texture(w, h,d, tag = "plus_texture")
-    for path in os.listdir("Teachers"):
-#        print("Teachers\\"+path)
-        w,h,c,d = pygui.load_image("Teachers\\"+path)
-        pygui.add_dynamic_texture(w, h,d, tag = "teacher_photo_"+path[:-4])
 
 
 #with pygui.handler_registry():
@@ -136,4 +132,5 @@ pygui.setup_dearpygui()
 pygui.show_viewport()
 pygui.set_primary_window("Shedule", True)
 pygui.start_dearpygui()
+
 pygui.destroy_context()
